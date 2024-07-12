@@ -1,0 +1,13 @@
+.header {
+    font-family: 'Hi Melody', sans-serif;
+    font-weight: bold;
+    font-size: 1.8rem;
+    height: 80px;
+}
+
+.headItems {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
