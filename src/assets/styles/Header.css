@@ -1,13 +1,33 @@
-.header {
-    font-family: 'Hi Melody', sans-serif;
-    font-weight: bold;
-    font-size: 1.8rem;
-    height: 80px;
+.nav-menu {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 5rem;
+    font-family: "Hi Melody", sans-serif;
 }
 
-.headItems {
+.nav-logo {
+    flex: 1;
+    font-weight: bold;
+    font-size: 3rem;
+    text-decoration-line: none;
+    color: black;
+    text-align: center;
+}
+.navlogo:hover {
+    cursor: pointer;
+}
+
+.nav-sub {
+    flex: 4;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    width: 100%;
+    cursor: pointer;
+}
+
+.nav-item {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: black;
 }

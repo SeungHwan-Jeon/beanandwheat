@@ -6,40 +6,23 @@ function Header() {
     let navigate = useNavigate();
 
     return (
-        <Navbar
-            collapseOnSelect
-            expand="lg"
-            className="bg-body-tertiary header"
-        >
-            <Container className="headItems">
-                <Navbar href="#home">콩과밀</Navbar>
-                <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-                <Navbar.Collapse id="responsive-navbar-nav">
-                    <Nav className="me-auto">
-                        <Nav.Link href="#features">Features</Nav.Link>
-                        <Nav.Link href="#pricing">Pricing</Nav.Link>
-                        <NavDropdown
-                            title="Dropdown"
-                            id="collapsible-nav-dropdown"
-                        >
-                            <NavDropdown.Item href="#action/3.1">
-                                Action
-                            </NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.2">
-                                Another action
-                            </NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.3">
-                                Something
-                            </NavDropdown.Item>
-                            <NavDropdown.Divider />
-                            <NavDropdown.Item href="#action/3.4">
-                                Separated link
-                            </NavDropdown.Item>
-                        </NavDropdown>
-                    </Nav>
-                </Navbar.Collapse>
-            </Container>
-        </Navbar>
+        <div className="nav-menu">
+            <a
+                className="nav-logo"
+                onClick={() => {
+                    navigate("/");
+                }}
+            >
+                콩과밀
+            </a>
+            <div className="nav-sub">
+                <a className="nav-item nav-introduce">매장 소개</a>
+                <a className="nav-item nav-menu">메뉴</a>
+                <a className="nav-item nav-directions">오시는 길</a>
+                <a className="nav-item nav-about">문의</a>
+                <a className="nav-item nav-notice">공지</a>
+            </div>
+        </div>
     );
 }
 export default Header;
