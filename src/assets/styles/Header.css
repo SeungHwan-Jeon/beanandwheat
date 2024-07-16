@@ -1,16 +1,21 @@
-.nav-menu {
+.header {
     display: flex;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
     justify-content: space-around;
     align-items: center;
     height: 5rem;
     font-family: "Hi Melody", sans-serif;
+    background-color: white;
 }
 
 .nav-logo {
     flex: 1;
     background-image: url('/src/assets/images/logo.png');
     height: 100%;
-    width: 100%;
+    width:  10px;
     background-size: cover;
     background-position: center;
 }
@@ -18,14 +23,7 @@
     cursor: pointer;
 }
 
-/* .and {
-    margin: 2px;
-    color: white;
-    text-shadow: -2px 0 black, 0 2px black, 1px 0 black, 0 -1px black;
-    font-size: 2rem;
-} */
-
-.nav-sub {
+ul {
     flex: 4;
     display: flex;
     justify-content: space-around;
@@ -33,8 +31,8 @@
     cursor: pointer;
 }
 
-.nav-item {
-    text-decoration: none;
+li {
+    list-style-type: none;
     font-size: 1.5rem;
     color: black;
 }

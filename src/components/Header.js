@@ -6,20 +6,15 @@ function Header() {
     let navigate = useNavigate();
 
     return (
-        <div className="nav-menu">
-            <a
-                className="nav-logo"
-                onClick={() => {
-                    navigate("/");
-                }}
-            ></a>
-            <div className="nav-sub">
-                <a className="nav-item nav-introduce">매장 소개</a>
-                <a className="nav-item nav-menu">메뉴</a>
-                <a className="nav-item nav-directions">오시는 길</a>
-                <a className="nav-item nav-about">문의</a>
-                <a className="nav-item nav-notice">공지</a>
-            </div>
+        <div className="header">
+            <div className="nav-logo"></div>
+            <ul className="nav-sub">
+                <li className="nav-item ">매장 소개</li>
+                <li className="nav-item ">메뉴</li>
+                <li className="nav-item ">오시는 길</li>
+                <li className="nav-item ">문의</li>
+                <li className="nav-item ">공지</li>
+            </ul>
         </div>
     );
 }

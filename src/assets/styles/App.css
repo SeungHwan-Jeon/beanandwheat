@@ -11,6 +11,7 @@ body {
     text-align: center;
 }
 
+
 .App-logo {
     height: 40vmin;
     pointer-events: none;
@@ -49,7 +50,7 @@ body {
 /* 메인 페이지 사진 */
 .main-bg {
     position: relative;
-    height: 600px;
+    height: 70vh;
     background-image: url("../images/main-bg.jpg");
     background-size: cover;
     background-position: center;
