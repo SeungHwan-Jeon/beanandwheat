@@ -12,9 +12,7 @@ function Header() {
                 onClick={() => {
                     navigate("/");
                 }}
-            >
-                콩과밀
-            </a>
+            ></a>
             <div className="nav-sub">
                 <a className="nav-item nav-introduce">매장 소개</a>
                 <a className="nav-item nav-menu">메뉴</a>
