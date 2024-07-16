@@ -9,14 +9,16 @@
     height: 5rem;
     font-family: "Hi Melody", sans-serif;
     background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .nav-logo {
     flex: 1;
     background-image: url('/src/assets/images/logo.png');
     height: 100%;
-    width:  10px;
-    background-size: cover;
+    width:  50%;
+    background-size: contain;
+    background-repeat: no-repeat;
     background-position: center;
 }
 .nav-logo:hover {
@@ -29,6 +31,7 @@ ul {
     justify-content: space-around;
     align-items: center;
     cursor: pointer;
+    margin-bottom: 0 !important;
 }
 
 li {
