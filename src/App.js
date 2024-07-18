@@ -3,6 +3,7 @@ import "./assets/styles/App.css";
 import Header from "./components/Header.js";
 import Direction from "./components/Directions.js";
 import Representative from "./components/Representative.js";
+import Footer from "./components/Footer.js";
 import { Routes, Route, Link, useNavigate } from "react-router-dom";
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
             <div className="main-bg"></div>
             <Representative id="representative-section"></Representative>
             <Direction id="direction-section"></Direction>
+            <Footer></Footer>
         </div>
     );
 }

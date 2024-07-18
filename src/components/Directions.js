@@ -25,7 +25,7 @@ function Directions(props) {
                                     <FontAwesomeIcon icon="fa-light fa-phone" />
                                     전화번호
                                 </th>
-                                <td className="tb1">0507-1430-3567</td>
+                                <td className="tb1">053-812-3567</td>
                             </tr>
                             <tr>
                                 <th>주소</th>

@@ -14,7 +14,7 @@
 
 .nav-logo {
     flex: 1;
-    background-image: url('/src/assets/images/logo-removebg-preview.png');
+    background-image: url('/public/images/logo-remove.png');
     height: 100%;
     width:  50%;
     background-size: contain;
