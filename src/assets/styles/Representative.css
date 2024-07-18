@@ -2,3 +2,34 @@
     margin-top: 2rem;
     height: 70vh;
 }
+
+.representative h4 {
+    margin: 2rem;
+    margin-bottom: 0;
+    font-weight: bold;
+    font-size: 2rem;
+    text-align: start;
+}
+
+.representative p {
+    text-align: end;
+    margin: 2rem;
+    margin-top: 0;
+}
+
+.menu-card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.menu-list {
+    display: flex;
+    justify-content: space-around;
+}
+
+.menu-img {
+    height: 180px;
+}
+
+.menu-body {
+    height: 180px;
+}
