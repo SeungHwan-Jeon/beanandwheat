@@ -24,16 +24,13 @@
 .nav-logo:hover {
     cursor: pointer;
 }
-.nav-item {
-    padding: 1rem;
-    border-radius: 8px;
-    transition: background-color 0.3s ease;
-}
-.nav-item:hover {
-    background-color: #D9D3D0;
-}
 
-ul {
+li {
+    list-style-type: none;
+    font-size: 1.5rem;
+    color: black;
+}
+.nav-sub {
     flex: 4;
     display: flex;
     justify-content: space-around;
@@ -42,8 +39,39 @@ ul {
     margin-bottom: 0 !important;
 }
 
-li {
-    list-style-type: none;
-    font-size: 1.5rem;
-    color: black;
+.nav-item {
+    padding: 0 1rem;
+    /* border-radius: 8px; */
+    transition: background-color 0.3s ease;
+}
+.nav-item:hover .nav-item span{
+    display: block;
+    width: 100%;
+    background-color: #D9D3D0;
+}
+.nav-item span {
+    overflow: hidden;
+}
+
+
+.nav-menu {
+    position: relative;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 8rem;
+    background-color: white;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    color: #333;
+    padding: 0 10px;
+    margin: 0;
+    left: 0;
+}
+.nav-menu:hover .dropdown-content {
+    display: block;
+}
+.dropdown-content li:hover {
+    background-color: #ececec
 }
