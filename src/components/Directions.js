@@ -15,13 +15,16 @@ function Directions(props) {
                 ></iframe>
                 <div className="direction-info">
                     <div className="direction-header">
-                        <h2>콩과밀</h2>
+                        <h2></h2>
                         <p>오시는 길</p>
                     </div>
                     <table>
                         <tbody>
                             <tr>
-                                <th className="tb1">전화번호</th>
+                                <th className="tb1">
+                                    <FontAwesomeIcon icon="fa-light fa-phone" />
+                                    전화번호
+                                </th>
                                 <td className="tb1">0507-1430-3567</td>
                             </tr>
                             <tr>
@@ -42,7 +45,7 @@ function Directions(props) {
                     </table>
                     <a className="naver-place" href="https://naver.me/xrPd98ch">
                         <FontAwesomeIcon icon={faMapMarkerAlt} />
-                        네이버 플레이스
+                        네이버 지도 바로가기
                     </a>
                 </div>
             </div>

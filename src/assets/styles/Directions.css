@@ -88,29 +88,41 @@ iframe {
 
 .direction-info .direction-header {
     text-align: center;
-    margin-bottom: 1.5rem;
+    /* margin-bottom: 1rem; */
     color: #333;
+    display: flex;
 }
 
 .direction-info .direction-header h2 {
-    font-size: 2rem;
+    /* font-size: 2rem;
     font-weight: bold;
     margin-bottom: 0.5rem;
     color: #2c3e50;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); */
+    width: 100%;
+    height: 6rem;
+    /* 원하는 높이로 설정 */
+    background-image: url('../images/logo.png');
+    /* 경로를 절대 경로로 확인 */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-bottom: 0.5rem;
 }
 
 .direction-info .direction-header p {
     font-size: 1.2rem;
+    font-weight: bold;
+    white-space: nowrap;
+    padding-top: 4rem;
     color: #555;
     margin-bottom: 1rem;
-    font-style: italic;
 }
 
 table {
     border-collapse: collapse;
     width: 100%;
-    margin: 1rem 0;
+    margin: 0 0 1rem 0;
     background-color: white;
 }
 
@@ -145,13 +157,18 @@ th {
     justify-content: center;
     margin-top: 1.5rem;
     padding: 0.5rem 1rem;
-    background-color: #2c3e50;
+    background-color: #03C75A;
     color: #fff;
     border-radius: 4px;
     text-decoration: none;
     font-weight: bold;
     white-space: nowrap;
+    height: 3rem;
     /* 텍스트가 두 줄로 나뉘지 않도록 함 */
+}
+.naver-place:hover {
+    background-color: #005927;
+    transition: background-color 0.5s ease;
 }
 
 .naver-place svg {
@@ -167,7 +184,7 @@ th {
 
     iframe {
         width: 100%;
-        height: 300px;
+        height: 600px;
         margin-bottom: 2rem;
     }
 }
