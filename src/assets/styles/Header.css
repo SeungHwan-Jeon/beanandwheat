@@ -8,13 +8,13 @@
     align-items: center;
     height: 5rem;
     font-family: "Hi Melody", sans-serif;
-    background-color: white;
+    background-color: #F1EDEB;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .nav-logo {
     flex: 1;
-    background-image: url('/src/assets/images/logo.png');
+    background-image: url('/src/assets/images/logo-removebg-preview.png');
     height: 100%;
     width:  50%;
     background-size: contain;
@@ -23,6 +23,14 @@
 }
 .nav-logo:hover {
     cursor: pointer;
+}
+.nav-item {
+    padding: 1rem;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+.nav-item:hover {
+    background-color: #D9D3D0;
 }
 
 ul {

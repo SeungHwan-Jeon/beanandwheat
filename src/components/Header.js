@@ -33,10 +33,7 @@ function Header() {
         <div className="header">
             <div onClick={scrollToTop} className="nav-logo"></div>
             <ul className="nav-sub">
-                <li
-                    className="nav-item"
-                    onClick={() => scrollToSection("section1")}
-                >
+                <li className="nav-item" onClick={scrollToTop}>
                     매장 소개
                 </li>
                 <li

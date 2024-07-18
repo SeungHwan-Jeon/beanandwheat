@@ -1,10 +1,16 @@
 import "../assets/styles/Representative.css";
 import { Card } from "react-bootstrap";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPlus } from "@fortawesome/free-solid-svg-icons";
+
 function Representative(props) {
     return (
         <div id={props.id} className="representative">
             <h4>대표 메뉴</h4>
-            <p>전체 메뉴</p>
+            <button>
+                전체 메뉴
+                <FontAwesomeIcon style={{ marginLeft: 5 }} icon={faPlus} />
+            </button>
             <div className="menu-list">
                 <MenuCard></MenuCard>
                 <MenuCard></MenuCard>

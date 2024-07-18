@@ -1,5 +1,7 @@
 .representative {
     margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
     height: 70vh;
 }
 
@@ -11,10 +13,23 @@
     text-align: start;
 }
 
-.representative p {
-    text-align: end;
+.representative button {
+    align-self: flex-end;
     margin: 2rem;
     margin-top: 0;
+    padding: 10px 20px;
+    background-color: #D9D3D0;
+    color: #373940;
+    text-decoration: none;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 1rem;
+    font-weight: bold;
+}
+.representative button:hover {
+    background-color: #B2ABA8;
 }
 
 .menu-card {
