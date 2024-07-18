@@ -10,8 +10,8 @@ function App() {
         <div className="App">
             <Header></Header>
             <div className="main-bg"></div>
-            <Representative></Representative>
-            <Direction></Direction>
+            <Representative id="representative-section"></Representative>
+            <Direction id="direction-section"></Direction>
         </div>
     );
 }

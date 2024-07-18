@@ -1,21 +1,24 @@
+import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons";
 import "../assets/styles/Directions.css";
 
-function Directions() {
+function Directions(props) {
     return (
         <>
-            <div className="directions">
+            <div id={props.id} className="directions">
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d808.8228906829469!2d128.73445575548027!3d35.817321569882274!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3566090c9c17b45d%3A0x577910ac05be71c4!2z7L2p6rO867CAIGNvZmZlZSAmIGJha2VyeQ!5e0!3m2!1sko!2skr!4v1721042003879!5m2!1sko!2skr"
-                    allowfullscreen=""
+                    allowFullScreen=""
                     loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"
+                    referrerPolicy="no-referrer-when-downgrade"
                 ></iframe>
                 <div className="direction-info">
+                    <div className="direction-header">
+                        <h2>콩과밀</h2>
+                        <p>오시는 길</p>
+                    </div>
                     <table>
-                        <thead>
-                            <p>콩과밀</p>
-                            <p>오시는 길</p>
-                        </thead>
                         <tbody>
                             <tr>
                                 <th className="tb1">전화번호</th>
@@ -37,6 +40,10 @@ function Directions() {
                             </tr>
                         </tbody>
                     </table>
+                    <a className="naver-place" href="https://naver.me/xrPd98ch">
+                        <FontAwesomeIcon icon={faMapMarkerAlt} />
+                        네이버 플레이스
+                    </a>
                 </div>
             </div>
         </>
