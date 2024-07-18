@@ -52,7 +52,7 @@ body {
 .main-bg {
     position: relative;
     height: 70vh;
-    background-image: url("../images/menu.jpg");
+    background-image: url("/public/images/menu.jpg");
     background-size: cover;
     background-position: center;
 }

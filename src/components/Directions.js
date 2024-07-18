@@ -1,6 +1,4 @@
 import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons";
 import "../assets/styles/Directions.css";
 
 function Directions(props) {
@@ -21,10 +19,7 @@ function Directions(props) {
                     <table>
                         <tbody>
                             <tr>
-                                <th className="tb1">
-                                    <FontAwesomeIcon icon="fa-light fa-phone" />
-                                    전화번호
-                                </th>
+                                <th className="tb1">전화번호</th>
                                 <td className="tb1">053-812-3567</td>
                             </tr>
                             <tr>
@@ -44,8 +39,12 @@ function Directions(props) {
                         </tbody>
                     </table>
                     <a className="naver-place" href="https://naver.me/xrPd98ch">
-                        <FontAwesomeIcon icon={faMapMarkerAlt} />
+                        <i class="fa-solid fa-location-dot"></i>
                         네이버 지도 바로가기
+                    </a>
+                    <a className="openkakao" href="#">
+                        <i class="fa-solid fa-comment"></i>
+                        카카오톡 채널 바로가기
                     </a>
                 </div>
             </div>
