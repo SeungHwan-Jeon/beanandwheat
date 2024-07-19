@@ -1,18 +1,19 @@
 import React from "react";
 import "./assets/styles/App.css";
 import Header from "./components/Header.js";
-import Direction from "./components/Directions.js";
-import Representative from "./components/Representative.js";
+import Main from "./pages/Main.js";
 import Footer from "./components/Footer.js";
+import FullMenu from "./pages/FullMenu.js";
 import { Routes, Route, Link, useNavigate } from "react-router-dom";
 
 function App() {
     return (
         <div className="App">
             <Header></Header>
-            <div className="main-bg"></div>
-            <Representative id="representative-section"></Representative>
-            <Direction id="direction-section"></Direction>
+            <Routes>
+                <Route path="/" element={<Main></Main>}></Route>
+                <Route path="/fullmenu" element={<FullMenu></FullMenu>}></Route>
+            </Routes>
             <Footer></Footer>
         </div>
     );

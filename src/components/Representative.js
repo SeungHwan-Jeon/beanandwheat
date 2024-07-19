@@ -2,12 +2,19 @@ import "../assets/styles/Representative.css";
 import { Card } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
+import { useNavigate } from "react-router-dom";
 
 function Representative(props) {
+    let navigate = useNavigate();
+
     return (
         <div id={props.id} className="representative">
             <h4>대표 메뉴</h4>
-            <button>
+            <button
+                onClick={() => {
+                    navigate("/fullmenu");
+                }}
+            >
                 전체 메뉴
                 <FontAwesomeIcon style={{ marginLeft: 5 }} icon={faPlus} />
             </button>
