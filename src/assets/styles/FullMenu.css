@@ -1,8 +1,32 @@
 .full-menu {
     margin-top: 5rem;
+    height: 80vh;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center; */
 }
 
 .menu-tab {
-    margin-top: 3rem;
+    padding-top: 3rem;
     justify-content: center;
+}
+
+.coffee-tabs {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 0.5rem;
+}
+
+.coffee-tabs li {
+    font-size: 1rem;
+    margin: 0 0.1rem;
+    padding: 0.3rem 0.8rem;
+    background-color: #F7DC6F;
+    border-radius: 4px;
+}
+
+.coffee-tabs li:hover {
+    background-color: #F4D03F;
+    cursor: pointer;
 }

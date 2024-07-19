@@ -1,11 +1,19 @@
-import { useState } from "react";
+import { useEffect } from "react";
 import "../assets/styles/FullMenu.css";
-import { Container, Nav } from "react-bootstrap";
+import { Nav } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
+import { changeTab } from "../store";
 
 function FullMenu() {
-    let [tab, setTab] = useState(0);
     let menuTab = useSelector((state) => state.menuTab);
+    let dispatch = useDispatch();
+
+    useEffect(() => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+        });
+    }, [menuTab]);
 
     return (
         <div className="full-menu">
@@ -16,8 +24,9 @@ function FullMenu() {
             >
                 <Nav.Item>
                     <Nav.Link
+                        className="nav-link"
                         onClick={() => {
-                            setTab(0);
+                            dispatch(changeTab(0));
                         }}
                         eventKey="link0"
                     >
@@ -26,8 +35,9 @@ function FullMenu() {
                 </Nav.Item>
                 <Nav.Item>
                     <Nav.Link
+                        className="nav-link"
                         onClick={() => {
-                            setTab(1);
+                            dispatch(changeTab(1));
                         }}
                         eventKey="link1"
                     >
@@ -36,8 +46,9 @@ function FullMenu() {
                 </Nav.Item>
                 <Nav.Item>
                     <Nav.Link
+                        className="nav-link"
                         onClick={() => {
-                            setTab(2);
+                            dispatch(changeTab(2));
                         }}
                         eventKey="link2"
                     >
@@ -45,28 +56,27 @@ function FullMenu() {
                     </Nav.Link>
                 </Nav.Item>
             </Nav>
-            <TabContent tab={tab}></TabContent>
+
+            <TabContent></TabContent>
         </div>
     );
 }
 
-function TabContent({ tab }) {
-    return [<div>내용0</div>, <Coffee></Coffee>, <div>내용2</div>][tab];
+function TabContent() {
+    let menuTab = useSelector((state) => state.menuTab);
+    console.log(menuTab);
+    return [<div>내용0</div>, <Coffee></Coffee>, <div>내용2</div>][menuTab];
 }
 
 function Coffee() {
     return (
         <div>
-            <ul>
-                <li>에스프레소</li>
-                <li>아메리카노</li>
-                <li>카페라떼</li>
-                <li>시나몬 카푸치노</li>
-                <li>바닐라라떼</li>
-                <li>헤이즐넛 라떼</li>
-                <li>카페모카(no 휘핑)</li>
-                <li>더치 아메리카노</li>
-                <li>핸드 드립</li>
+            <ul className="coffee-tabs">
+                <li>COFFEE</li>
+                <li>ADE & SMOOTHIE</li>
+                <li>LATTE</li>
+                <li>TEA</li>
+                <li>HERB</li>
             </ul>
         </div>
     );

@@ -50,6 +50,13 @@ function Header(props) {
             scrollToSection(sectionId);
         }
     }
+
+    function setTab(i, e) {
+        e.stopPropagation();
+        dispatch(changeTab(i));
+        navigate("/fullmenu");
+    }
+
     return (
         <div className="header">
             <div
@@ -73,27 +80,21 @@ function Header(props) {
                         <li>대표 메뉴</li>
                         <li
                             onClick={(e) => {
-                                e.stopPropagation();
-                                dispatch(changeTab(0));
-                                navigate("/fullmenu");
+                                setTab(0, e);
                             }}
                         >
                             베이커리
                         </li>
                         <li
                             onClick={(e) => {
-                                e.stopPropagation();
-                                dispatch(changeTab(1));
-                                navigate("/fullmenu");
+                                setTab(1, e);
                             }}
                         >
                             커피/음료
                         </li>
                         <li
                             onClick={(e) => {
-                                e.stopPropagation();
-                                dispatch(changeTab(2));
-                                navigate("/fullmenu");
+                                setTab(2, e);
                             }}
                         >
                             디저트
