@@ -18,7 +18,7 @@
     margin-top: 0.5rem;
 }
 
-.coffee-tabs li {
+.coffee-tabs div {
     font-size: 1rem;
     margin: 0 0.1rem;
     padding: 0.3rem 0.8rem;
@@ -26,7 +26,23 @@
     border-radius: 4px;
 }
 
-.coffee-tabs li:hover {
+.coffee-tabs div:hover {
     background-color: #F4D03F;
     cursor: pointer;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: #f2f2f2;
 }
