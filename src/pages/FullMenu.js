@@ -1,9 +1,9 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import "../assets/styles/FullMenu.css";
-import { Nav } from "react-bootstrap";
+import { Nav, Container } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { changeTab } from "../store";
-import drinksData from "../assets/data/drinksData";
+import Drinks from "../components/menuCategory/Drinks";
 
 function FullMenu() {
     let menuTab = useSelector((state) => state.menuTab);
@@ -57,8 +57,9 @@ function FullMenu() {
                     </Nav.Link>
                 </Nav.Item>
             </Nav>
-
-            <TabContent></TabContent>
+            <Container>
+                <TabContent></TabContent>
+            </Container>
         </div>
     );
 }
@@ -66,62 +67,6 @@ function FullMenu() {
 function TabContent() {
     let menuTab = useSelector((state) => state.menuTab);
     return [<div>내용0</div>, <Drinks></Drinks>, <div>내용2</div>][menuTab];
-}
-
-function Drinks() {
-    const coffeeData = drinksData.filter((item) => item.category === "COFFEE");
-    const adeNSmoothieData = drinksData.filter(
-        (item) => item.category === "ADE & SMOOTHIE"
-    );
-    const latteData = drinksData.filter((item) => item.category === "LATTE");
-    const teaData = drinksData.filter((item) => item.category === "TEA");
-    const herbData = drinksData.filter((item) => item.category === "HERB");
-
-    function createMenuDiv(menu) {
-        return menu.map((a, i) => {
-            return (
-                <>
-                    <tr>
-                        <td>{a.item}</td>
-                        <td>{a.hotPrice}</td>
-                        <td>{a.icePrice}</td>
-                    </tr>
-                </>
-            );
-        });
-    }
-
-    function MenuTable({ menu }) {
-        return (
-            <>
-                <div>
-                    {menu[0].category}
-                    <table>
-                        <thead>
-                            <tr>
-                                <th></th>
-                                <th>Hot Price</th>
-                                <th>Ice Price</th>
-                            </tr>
-                        </thead>
-                        <tbody>{createMenuDiv(menu)}</tbody>
-                    </table>
-                </div>
-            </>
-        );
-    }
-
-    return (
-        <div>
-            <div className="coffee-tabs">
-                <MenuTable menu={coffeeData}></MenuTable>
-                <MenuTable menu={adeNSmoothieData}></MenuTable>
-                <MenuTable menu={latteData}></MenuTable>
-                <MenuTable menu={teaData}></MenuTable>
-                <MenuTable menu={herbData}></MenuTable>
-            </div>
-        </div>
-    );
 }
 
 export default FullMenu;

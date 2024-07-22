@@ -11,38 +11,38 @@
     justify-content: center;
 }
 
-.coffee-tabs {
+.drinks-tab {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     width: 100%;
     margin-top: 0.5rem;
 }
 
-.coffee-tabs div {
+.drinks-tab ul {
+    display: flex;
+    justify-content: center;
+
+}
+.drinks-tab li {
     font-size: 1rem;
     margin: 0 0.1rem;
     padding: 0.3rem 0.8rem;
     background-color: #F7DC6F;
     border-radius: 4px;
 }
-
-.coffee-tabs div:hover {
+.drinks-tab li:hover {
     background-color: #F4D03F;
     cursor: pointer;
 }
 
-table {
+
+.drinks-tab div {
+    display: flex;
+
+}
+
+.menu-cards {
     width: 100%;
-    border-collapse: collapse;
-}
-
-th,
-td {
-    border: 1px solid #ddd;
-    padding: 8px;
-    text-align: center;
-}
-
-th {
-    background-color: #f2f2f2;
+    height: 50vh;
 }
