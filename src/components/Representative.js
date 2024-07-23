@@ -9,7 +9,7 @@ function Representative(props) {
 
     return (
         <div id={props.id} className="representative">
-            <div className="menuNnutton">
+            <div className="menuNbutton">
                 <h4>대표 메뉴</h4>
                 <button
                     onClick={() => {

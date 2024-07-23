@@ -14,8 +14,7 @@
 .representative button {
     align-self: flex-end;
     margin: 2rem;
-    margin-top: 0;
-    padding: 10px 20px;
+    padding: 10px 10px;
     background-color: #D9D3D0;
     color: #373940;
     text-decoration: none;
@@ -25,14 +24,24 @@
     transition: background-color 0.3s ease;
     font-size: 1rem;
     font-weight: bold;
+    flex: 1;
 }
 .representative button:hover {
     background-color: #B2ABA8;
 }
 
-.menuNnutton {
+.menuNbutton {
     display: flex;
+    align-items: center;
     justify-content: center;
+}
+
+.menuNbutton h4 {
+    flex: 7;
+}
+
+.menuNbutton button {
+    display: block;
 }
 
 .menu-card {

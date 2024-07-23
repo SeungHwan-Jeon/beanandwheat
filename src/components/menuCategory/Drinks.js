@@ -50,11 +50,11 @@ function DrinkMenu({ menu }) {
                 <div className="price">
                     <div>
                         <strong>Hot</strong>
-                        {a.hotPrice ? `${a.hotPrice}원` : "-"}
+                        {a.hotPrice ? `${a.hotPrice}` : "-"}
                     </div>
                     <div>
                         <strong>Ice</strong>
-                        {a.icePrice ? `${a.icePrice}원` : "-"}
+                        {a.icePrice ? `${a.icePrice}` : "-"}
                     </div>
                 </div>
             </div>

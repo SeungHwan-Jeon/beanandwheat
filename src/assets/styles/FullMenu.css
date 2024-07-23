@@ -12,6 +12,7 @@
 }
 
 .drinks-tab {
+    font-family: 'Merriweather', sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -41,6 +42,7 @@
 }
 
 .menu-card-container {
+    font-family: 'Merriweather', sans-serif;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
