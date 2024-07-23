@@ -1,16 +1,14 @@
 .representative {
-    margin-top: 2rem;
     display: flex;
     flex-direction: column;
     height: 70vh;
 }
 
 .representative h4 {
-    margin: 2rem;
     margin-bottom: 0;
     font-weight: bold;
     font-size: 2rem;
-    text-align: start;
+    text-align: center;
 }
 
 .representative button {
@@ -30,6 +28,11 @@
 }
 .representative button:hover {
     background-color: #B2ABA8;
+}
+
+.menuNnutton {
+    display: flex;
+    justify-content: center;
 }
 
 .menu-card {

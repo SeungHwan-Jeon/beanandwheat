@@ -9,15 +9,17 @@ function Representative(props) {
 
     return (
         <div id={props.id} className="representative">
-            <h4>대표 메뉴</h4>
-            <button
-                onClick={() => {
-                    navigate("/fullmenu");
-                }}
-            >
-                전체 메뉴
-                <FontAwesomeIcon style={{ marginLeft: 5 }} icon={faPlus} />
-            </button>
+            <div className="menuNnutton">
+                <h4>대표 메뉴</h4>
+                <button
+                    onClick={() => {
+                        navigate("/fullmenu");
+                    }}
+                >
+                    전체 메뉴
+                    <FontAwesomeIcon style={{ marginLeft: 5 }} icon={faPlus} />
+                </button>
+            </div>
             <div className="menu-list">
                 <MenuCard></MenuCard>
                 <MenuCard></MenuCard>
