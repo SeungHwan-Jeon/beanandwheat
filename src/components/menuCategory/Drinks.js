@@ -1,7 +1,5 @@
 import drinksData from "../../assets/data/drinksData";
-import Header from "../Header";
 import { useState } from "react";
-import { Card, Container, Row, Col } from "react-bootstrap";
 
 function Drinks() {
     const coffeeData = drinksData.filter((item) => item.category === "COFFEE");
@@ -12,18 +10,27 @@ function Drinks() {
     const teaData = drinksData.filter((item) => item.category === "TEA");
     const herbData = drinksData.filter((item) => item.category === "HERB");
 
+    const [selectedCategory, setSelectedCategory] = useState("COFFEE");
+    const categories = [...new Set(drinksData.map((item) => item.category))];
+    const filteredMenu = drinksData.filter(
+        (item) => item.category === selectedCategory
+    );
+
     return (
         <>
             <div className="drinks-tab">
                 <ul>
-                    <li>커피</li>
-                    <li>에이드 & 스무디</li>
-                    <li>라떼</li>
-                    <li>티</li>
-                    <li>허브</li>
+                    {categories.map((category, index) => (
+                        <li
+                            key={index}
+                            onClick={() => setSelectedCategory(category)}
+                        >
+                            {category}
+                        </li>
+                    ))}
                 </ul>
-                <div className="menu-cards">
-                    <DrinkMenu menu={coffeeData}></DrinkMenu>
+                <div className="menu-card-container">
+                    <DrinkMenu menu={filteredMenu} />
                 </div>
             </div>
         </>
@@ -33,17 +40,23 @@ function Drinks() {
 function DrinkMenu({ menu }) {
     return menu.map((a, i) => {
         return (
-            <div>
-                <Card style={{ width: "18rem" }}>
-                    <Card.Img variant="top" src={a.img} />
-                    <Card.Body>
-                        <Card.Title>{a.item}</Card.Title>
-                        <Card.Text>
-                            Some quick example text to build on the card title
-                            and make up the bulk of the card's content.
-                        </Card.Text>
-                    </Card.Body>
-                </Card>
+            <div key={i} className="menu-card">
+                <div className="content">
+                    <div className="icon">
+                        <i className={a.icon}></i>
+                    </div>
+                    <h3>{a.item}</h3>
+                </div>
+                <div className="price">
+                    <div>
+                        <strong>Hot</strong>
+                        {a.hotPrice ? `${a.hotPrice}원` : "-"}
+                    </div>
+                    <div>
+                        <strong>Ice</strong>
+                        {a.icePrice ? `${a.icePrice}원` : "-"}
+                    </div>
+                </div>
             </div>
         );
     });

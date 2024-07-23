@@ -57,9 +57,7 @@ function FullMenu() {
                     </Nav.Link>
                 </Nav.Item>
             </Nav>
-            <Container>
-                <TabContent></TabContent>
-            </Container>
+            <TabContent></TabContent>
         </div>
     );
 }
