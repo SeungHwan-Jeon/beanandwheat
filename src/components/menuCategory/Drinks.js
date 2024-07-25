@@ -2,14 +2,6 @@ import drinksData from "../../assets/data/drinksData";
 import { useState } from "react";
 
 function Drinks() {
-    const coffeeData = drinksData.filter((item) => item.category === "COFFEE");
-    const adeNSmoothieData = drinksData.filter(
-        (item) => item.category === "ADE & SMOOTHIE"
-    );
-    const latteData = drinksData.filter((item) => item.category === "LATTE");
-    const teaData = drinksData.filter((item) => item.category === "TEA");
-    const herbData = drinksData.filter((item) => item.category === "HERB");
-
     const [selectedCategory, setSelectedCategory] = useState("COFFEE");
     const categories = [...new Set(drinksData.map((item) => item.category))];
     const filteredMenu = drinksData.filter(
@@ -18,7 +10,7 @@ function Drinks() {
 
     return (
         <>
-            <div className="drinks-tab">
+            <div className="menu-detail-tab">
                 <ul>
                     {categories.map((category, index) => (
                         <li

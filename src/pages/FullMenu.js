@@ -4,6 +4,7 @@ import { Nav, Container } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { changeTab } from "../store";
 import Drinks from "../components/menuCategory/Drinks";
+import Breads from "../components/menuCategory/Bread";
 
 function FullMenu() {
     let menuTab = useSelector((state) => state.menuTab);
@@ -64,7 +65,7 @@ function FullMenu() {
 
 function TabContent() {
     let menuTab = useSelector((state) => state.menuTab);
-    return [<div>내용0</div>, <Drinks></Drinks>, <div>내용2</div>][menuTab];
+    return [<Breads></Breads>, <Drinks></Drinks>, <div>내용2</div>][menuTab];
 }
 
 export default FullMenu;

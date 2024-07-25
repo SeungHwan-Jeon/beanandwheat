@@ -11,7 +11,7 @@
     margin-top: 1rem;
 }
 
-.drinks-tab {
+.menu-detail-tab {
     font-family: 'Merriweather', sans-serif;
     display: flex;
     flex-direction: column;
@@ -19,7 +19,7 @@
     width: 100%;
 }
 
-.drinks-tab ul {
+.menu-detail-tab ul {
     list-style: none;
     padding: 0;
     display: flex;
@@ -28,7 +28,8 @@
     margin: 1em 0;
 }
 
-.drinks-tab li {
+.menu-detail-tab li {
+        font-family: 'Song Myung', sans-serif;
     cursor: pointer;
     padding: 0.5em 1em;
     background-color: #faf8f5;
@@ -37,12 +38,12 @@
     transition: background-color 0.2s;
 }
 
-.drinks-tab li:hover {
+.menu-detail-tab li:hover {
     background-color: #eae7e2;
 }
 
 .menu-card-container {
-    font-family: 'Merriweather', sans-serif;
+    font-family: 'Song Myung', sans-serif;      
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -72,14 +73,27 @@
 }
 
 .menu-card .content {
-    padding: 1em;
+    /* padding: 1em; */
+    padding-top: 1rem;
     text-align: center;
+}
+
+.menu-card h3 {
+    font-family: 'Song Myung', sans-serif;
+    padding-top: 0;
 }
 
 .menu-card .icon {
     font-size: 2em;
     color: #6b4f4f;
     margin-bottom: 0.5em;
+}
+
+.menu-card img {
+    font-size: 2em;
+    font-weight: bold;
+    color: #6b4f4f;
+    width: 100%;
 }
 
 .menu-card h3 {
