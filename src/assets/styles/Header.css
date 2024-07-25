@@ -6,7 +6,7 @@
     z-index: 1000;
     justify-content: space-around;
     align-items: center;
-    height: 5rem;
+    height: 10vh;
     background-color: #F1EDEB;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }

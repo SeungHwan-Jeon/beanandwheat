@@ -1,7 +1,11 @@
+import "../assets/styles/Questions.css";
+
 function Questions() {
     return (
         <>
-            <div style={{ height: "80vh" }}>페이지 준비 중입니다.</div>
+            <div className="questions">
+                <h4>페이지 준비중 입니다.</h4>
+            </div>
         </>
     );
 }

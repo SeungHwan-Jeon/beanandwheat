@@ -38,14 +38,19 @@ function Directions(props) {
                             </tr>
                         </tbody>
                     </table>
-                    <a className="naver-place" href="https://naver.me/xrPd98ch">
-                        <i class="fa-solid fa-location-dot"></i>
-                        네이버 지도 바로가기
-                    </a>
-                    <a className="openkakao" href="#">
-                        <i class="fa-solid fa-comment"></i>
-                        카카오톡 채널 바로가기
-                    </a>
+                    <div>
+                        <a
+                            className="naver-place"
+                            href="https://naver.me/xrPd98ch"
+                        >
+                            <i class="fa-solid fa-location-dot"></i>
+                            네이버 지도 바로가기
+                        </a>
+                        <a className="openkakao" href="#">
+                            <i class="fa-solid fa-comment"></i>
+                            카카오톡 채널 바로가기
+                        </a>
+                    </div>
                 </div>
             </div>
         </>

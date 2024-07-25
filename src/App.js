@@ -10,7 +10,7 @@ import { Routes, Route, Link, useNavigate } from "react-router-dom";
 
 function App() {
     let [menuTab, setMenuTab] = useState(0);
-
+    console.log(window.innerWidth);
     return (
         <div className="App">
             <Header menuTab={menuTab}></Header>
